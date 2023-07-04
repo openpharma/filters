@@ -1,0 +1,21 @@
+Package: filters
+Type: Package
+Title: A "snake_case" filter system for {R}
+Version: 0.3.0
+Author: Thomas Neitman [aut, cre],
+  Joe Zhu [ctb]
+Maintainer: Joe Zhu <joe.zhu@roche.com>
+Description: Enables filtering datasets by a priori specified identifiers
+    which correspond to saved filter expressions.
+Imports: yaml
+Suggests: 
+    ldply,
+    dplyr,
+    magrittr,
+    random.cdisc.data,
+    testthat
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)

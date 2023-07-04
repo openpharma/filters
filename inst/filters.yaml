@@ -1,0 +1,1363 @@
+ABN:
+  filter_identifier: ABN
+  filter_title: Abnormalities
+  filter_target: ADLB
+  filter_condition: ANRIND %in% c('LOW', 'HIGH', 'LOW LOW', 'HIGH HIGH')
+AHAPZ:
+  filter_identifier: AHAPZ
+  filter_title: Alpha-Hydroxyalprazolam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('AHAPZCV' , 'AHAPZLS' , 'AHAPZSI' )
+AHTRZ:
+  filter_identifier: AHTRZ
+  filter_title: Alpha-Hydroxytriazolam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('AHTRZCV' , 'AHTRZLS' , 'AHTRZSI' )
+ALBUM:
+  filter_identifier: ALBUM
+  filter_title: Albumin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('ALBUMCV' , 'ALBUMLS' , 'ALBUMSI' )
+ALKPH:
+  filter_identifier: ALKPH
+  filter_title: Alkaline Phosphatase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('ALKPHCV' , 'ALKPHLS' , 'ALKPHSI' )
+ALT:
+  filter_identifier: ALT
+  filter_title: SGPT/ALT
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('ALTCV' , 'ALTLS' , 'ALTSI' )
+AMYLAS:
+  filter_identifier: AMYLAS
+  filter_title: Amylase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('AMYLASCV' , 'AMYLASLS' , 'AMYLASSI' )
+AP:
+  filter_identifier: AP
+  filter_title: All Patients
+  filter_target: ADSL
+  filter_condition: FASFL == 'Y'
+APRZ:
+  filter_identifier: APRZ
+  filter_title: Alprazolam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('APRZCV' , 'APRZLS' , 'APRZSI' )
+AST:
+  filter_identifier: AST
+  filter_title: SGOT/AST
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('ASTCV' , 'ASTLS' , 'ASTSI' )
+BANDS:
+  filter_identifier: BANDS
+  filter_title: Neutrophils, Bands, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BANDSCV' , 'BANDSLS' , 'BANDSSI' )
+BANDSF:
+  filter_identifier: BANDSF
+  filter_title: Neutrophils, Bands, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BANDSFCV' , 'BANDSFLS' , 'BANDSFSI' )
+BASOS:
+  filter_identifier: BASOS
+  filter_title: Basophils, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BASOSCV' , 'BASOSLS' , 'BASOSSI' )
+BASOSF:
+  filter_identifier: BASOSF
+  filter_title: Basophils, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BASOSFCV' , 'BASOSFLS' , 'BASOSFSI' )
+BCP:
+  filter_identifier: BCP
+  filter_title: Best Overall Response of CR/PR by Investigator (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BCP'
+BCPDF:
+  filter_identifier: BCPDF
+  filter_title: Best Overall Response of CR/PR by IRF (derived, confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BCPDF'
+BCPF:
+  filter_identifier: BCPF
+  filter_title: Best Overall Response of CR/PR by IRF (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BCPF'
+BICARB:
+  filter_identifier: BICARB
+  filter_title: Bicarbonate HCO3
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BICARBCV' , 'BICARBLS' , 'BICARBSI' )
+BLMAXVAL:
+  filter_identifier: BLMAXVAL
+  filter_title: Baseline and Maximum Post-baseline Value
+  filter_target: VISITS
+  filter_condition: AVISIT %in% c('BASELINE', 'POST-BASELINE MAXIMUM')
+BMABNCP:
+  filter_identifier: BMABNCP
+  filter_title: Bone Marrow Abnormal Cells, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMABNCPCV' , 'BMABNCPLS' , 'BMABNCPSI' )
+BMBLPTC:
+  filter_identifier: BMBLPTC
+  filter_title: Bone Marrow Blast Cell Phenotype, Char
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMBLPTCCV' , 'BMBLPTCLS' , 'BMBLPTCSI' )
+BMCXCL13:
+  filter_identifier: BMCXCL13
+  filter_title: Bone Marrow Chemokine (C-X-C Motif) Ligand 13
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMCXCL13CV' , 'BMCXCL13LS' , 'BMCXCL13SI' )
+BMGMCSF:
+  filter_identifier: BMGMCSF
+  filter_title: Bone Marrow Granulocyte Macrophage Colony Stimulating Factor
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMGMCSFCV' , 'BMGMCSFLS' , 'BMGMCSFSI' )
+BMIFNGS:
+  filter_identifier: BMIFNGS
+  filter_title: Bone Marrow Interferon Gamma, Single Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMIFNGSCV' , 'BMIFNGSLS' , 'BMIFNGSSI' )
+BMILK10S:
+  filter_identifier: BMILK10S
+  filter_title: Bone Marrow Interleukin 10, Single Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMILK10SCV' , 'BMILK10SLS' , 'BMILK10SSI' )
+BMILK17S:
+  filter_identifier: BMILK17S
+  filter_title: Bone Marrow Interleukin 17, Single Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMILK17SCV' , 'BMILK17SLS' , 'BMILK17SSI' )
+BMILK2S:
+  filter_identifier: BMILK2S
+  filter_title: Bone Marrow Interleukin 2, Single Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMILK2SCV' , 'BMILK2SLS' , 'BMILK2SSI' )
+BMILK6S:
+  filter_identifier: BMILK6S
+  filter_title: Bone Marrow Interleukin 6, Single Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMILK6SCV' , 'BMILK6SLS' , 'BMILK6SSI' )
+BMTNFAS:
+  filter_identifier: BMTNFAS
+  filter_title: Bone Marrow Tumor Necrosis Factor Alpha, S Mol Array IA
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BMTNFASCV' , 'BMTNFASLS' , 'BMTNFASSI' )
+BOR:
+  filter_identifier: BOR
+  filter_title: Best Overall Response by Investigator (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BOR'
+BORDF:
+  filter_identifier: BORDF
+  filter_title: Best Overall Response by IRF (derived, confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BORDF'
+BORF:
+  filter_identifier: BORF
+  filter_title: Best Overall Response by IRF (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'BORF'
+BTKP:
+  filter_identifier: BTKP
+  filter_title: Bruton Tyrosine Kinase, Phosphorylated
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BTKPCV' , 'BTKPLS' , 'BTKPSI' )
+BTKT:
+  filter_identifier: BTKT
+  filter_title: Bruton Tyrosine Kinase, Total
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BTKTCV' , 'BTKTLS' , 'BTKTSI' )
+BUN:
+  filter_identifier: BUN
+  filter_title: Blood Urea Nitrogen
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('BUNCV' , 'BUNLS' , 'BUNSI' )
+CALCUM:
+  filter_identifier: CALCUM
+  filter_title: Calcium
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CALCUMCV' , 'CALCUMLS' , 'CALCUMSI' )
+CB:
+  filter_identifier: CB
+  filter_title: Clinical Benefit by Investigator (confirmation for response not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CB'
+CBCP:
+  filter_identifier: CBCP
+  filter_title: Best Confirmed Overall Response of CR/PR by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBCP'
+CBCPDF:
+  filter_identifier: CBCPDF
+  filter_title: Best Confirmed Overall Response of CR/PR by IRF (derived)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBCPDF'
+CBCPF:
+  filter_identifier: CBCPF
+  filter_title: Best Confirmed Overall Response of CR/PR by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBCPF'
+CBDF:
+  filter_identifier: CBDF
+  filter_title: Clinical Benefit by IRF (derived response, confirmation of response
+    not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBDF'
+CBF:
+  filter_identifier: CBF
+  filter_title: Clinical Benefit by IRF (confirmation of response not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBF'
+CBOR:
+  filter_identifier: CBOR
+  filter_title: Best Confirmed Overall Response by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBOR'
+CBORDF:
+  filter_identifier: CBORDF
+  filter_title: Best Confirmed Overall Response by IRF (derived)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBORDF'
+CBORF:
+  filter_identifier: CBORF
+  filter_title: Best Confirmed Overall Response by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CBORF'
+CCB:
+  filter_identifier: CCB
+  filter_title: Confirmed Clinical Benefit by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CCB'
+CCBDF:
+  filter_identifier: CCBDF
+  filter_title: Confirmed Clinical Benefit by IRF (derived response)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CCBDF'
+CCBF:
+  filter_identifier: CCBF
+  filter_title: Confirmed Clinical Benefit by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CCBF'
+CD4:
+  filter_identifier: CD4
+  filter_title: CD4 Cells, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CD4CV' , 'CD4LS' , 'CD4SI' )
+CD4F:
+  filter_identifier: CD4F
+  filter_title: Pericardial Fluid CD4 Cells, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CD4FCV' , 'CD4FLS' , 'CD4FSI' )
+CH541:
+  filter_identifier: CH541
+  filter_title: Arterial Blood PaO2/FiO2 Ratio
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CH541CV' , 'CH541LS' , 'CH541SI' )
+CHLOR:
+  filter_identifier: CHLOR
+  filter_title: Chloride
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CHLORCV' , 'CHLORLS' , 'CHLORSI' )
+CHOLES:
+  filter_identifier: CHOLES
+  filter_title: Cholesterol
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CHOLESCV' , 'CHOLESLS' , 'CHOLESSI' )
+CLDPX:
+  filter_identifier: CLDPX
+  filter_title: Chlordiazepoxide
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CLDPXCV' , 'CLDPXLS' , 'CLDPXSI' )
+CLZPM:
+  filter_identifier: CLZPM
+  filter_title: Clonazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CLZPMCV' , 'CLZPMLS' , 'CLZPMSI' )
+CMPREV:
+  filter_identifier: CMPREV
+  filter_title: Previous Medications
+  filter_target: ADCM
+  filter_condition: ATIREL %in% c( 'PRIOR_CONCOMITANT', 'PRIOR')
+CNCM:
+  filter_identifier: CNCM
+  filter_title: Concomitant Medications
+  filter_target: ADCM
+  filter_condition: ATIREL %in% c( 'PRIOR_CONCOMITANT', 'CONCOMITANT')
+CNCR:
+  filter_identifier: CNCR
+  filter_title: Concurrent Medical History
+  filter_target: ADMH
+  filter_condition: ATIREL %in% c('PRIOR_CONCOMITANT')
+CO02801Q:
+  filter_identifier: CO02801Q
+  filter_title: 'EORTC QLQ-C30: Compliance - Completed at least 1 question'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'CO02801Q'
+CO02850P:
+  filter_identifier: CO02850P
+  filter_title: 'EORTC QLQ-C30: Compliance - Completed at least 50% of questions'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'CO02850P'
+CO028ALL:
+  filter_identifier: CO028ALL
+  filter_title: 'EORTC QLQ-C30: Compliance - Completed all questions'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'CO028ALL'
+COMPRT:
+  filter_identifier: COMPRT
+  filter_title: Cartilage Oligomeric Matrix Protein
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('COMPRTCV' , 'COMPRTLS' , 'COMPRTSI' )
+COV:
+  filter_identifier: COV
+  filter_title: Confirmed/Suspected COVID-19 AEs
+  filter_target: ADAE
+  filter_condition: ACOVFL == 'Y'
+COVAS:
+  filter_identifier: COVAS
+  filter_title: AEs Associated with COVID-19
+  filter_target: ADAE
+  filter_condition: ACOVASFL == 'Y'
+COVDV:
+  filter_identifier: COVDV
+  filter_title: COVID-19 Related Protocol Deviations
+  filter_target: ADDV
+  filter_condition: AEPRELFL == 'Y'
+COVPT:
+  filter_identifier: COVPT
+  filter_title: Patients with Confirmed/Suspected COVID-19
+  filter_target: ADSL
+  filter_condition: COVIDFL == 'Y'
+CPK:
+  filter_identifier: CPK
+  filter_title: Creatine Kinase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CPKCV' , 'CPKLS' , 'CPKSI' )
+CPKMB:
+  filter_identifier: CPKMB
+  filter_title: Creatine Kinase MB
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CPKMBCV' , 'CPKMBLS' , 'CPKMBSI' )
+CREATN:
+  filter_identifier: CREATN
+  filter_title: Creatinine
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('CREATNCV' , 'CREATNLS' , 'CREATNSI' )
+CRSD:
+  filter_identifier: CRSD
+  filter_title: Duration of Confirmed Response by Investigator
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'CRSD'
+CRSDDF:
+  filter_identifier: CRSDDF
+  filter_title: Duration of Confirmed Response by IRF (derived)
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'CRSDDF'
+CRSDF:
+  filter_identifier: CRSDF
+  filter_title: Duration of Confirmed Response by IRF
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'CRSDF'
+CRSP:
+  filter_identifier: CRSP
+  filter_title: Confirmed Response by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CRSP'
+CRSPDF:
+  filter_identifier: CRSPDF
+  filter_title: Confirmed Response by IRF (derived)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CRSPDF'
+CRSPF:
+  filter_identifier: CRSPF
+  filter_title: Confirmed Response by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'CRSPF'
+CTC35:
+  filter_identifier: CTC35
+  filter_title: Grade 3-5 Adverse Events
+  filter_target: ADAE
+  filter_condition: ATOXGR %in% c('3', '4', '5')
+CV:
+  filter_identifier: CV
+  filter_title: CV Results
+  filter_target: ADLB
+  filter_condition: PARCAT2 == 'CV'
+DBILI:
+  filter_identifier: DBILI
+  filter_title: Direct Bilirubin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('DBILICV' , 'DBILILS' , 'DBILISI' )
+DEATH:
+  filter_identifier: DEATH
+  filter_title: Death
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'DEATH'
+DIABP:
+  filter_identifier: DIABP
+  filter_title: Diastolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'DIABP'
+DRVVT:
+  filter_identifier: DRVVT
+  filter_title: Dilute Russell’s Viper Venom Time
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('DRVVTCV' , 'DRVVTLS' , 'DRVVTSI' )
+DSC:
+  filter_identifier: DSC
+  filter_title: Adverse Events Leading to Study Treatment Discontinuation
+  filter_target: ADAE
+  filter_condition: AEACN == 'DRUG WITHDRAWN'
+DSM:
+  filter_identifier: DSM
+  filter_title: Adverse Events Leading to Dose Modification or Interruption
+  filter_target: ADAE
+  filter_condition: AEACN %in% c('DOSE INCREASED', 'DOSE REDUCED', 'DRUG INTERRUPTED')
+DZPM:
+  filter_identifier: DZPM
+  filter_title: Diazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('DZPMCV' , 'DZPMLS' , 'DZPMSI' )
+ECGINTP:
+  filter_identifier: ECGINTP
+  filter_title: ECG Interpretation
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'ECGINTP'
+ECGQUAL:
+  filter_identifier: ECGQUAL
+  filter_title: ECG Qualitative Assessments
+  filter_target: ADEG
+  filter_condition: PARAMCD %in% c('ECGINTP', 'PWAVE', 'TWAVE', 'UWAVE')
+EOSIN:
+  filter_identifier: EOSIN
+  filter_title: Eosinophils, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('EOSINCV' , 'EOSINLS' , 'EOSINSI' )
+EOSINF:
+  filter_identifier: EOSINF
+  filter_title: Eosinophils, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('EOSINFCV' , 'EOSINFLS' , 'EOSINFSI' )
+EX028:
+  filter_identifier: EX028
+  filter_title: 'EORTC QLQ-C30: Compliance - Expectation'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'EX028'
+FASTGL:
+  filter_identifier: FASTGL
+  filter_title: Glucose, Fasting
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('FASTGLCV' , 'FASTGLLS' , 'FASTGLSI' )
+FATAL:
+  filter_identifier: FATAL
+  filter_title: Fatal Adverse Events
+  filter_target: ADAE
+  filter_condition: AESDTH == 'Y'
+FEMALE:
+  filter_identifier: FEMALE
+  filter_title: Female Patients
+  filter_target: ADSL
+  filter_condition: SEX == 'F'
+FIB:
+  filter_identifier: FIB
+  filter_title: Fibrinogen
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('FIBCV' , 'FIBLS' , 'FIBSI' )
+FLZPM:
+  filter_identifier: FLZPM
+  filter_title: Flurazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('FLZPMCV' , 'FLZPMLS' , 'FLZPMSI' )
+FUNCSC:
+  filter_identifier: FUNCSC
+  filter_title: Functional Scales/Global Health Status
+  filter_target: ADQS
+  filter_condition: PARCAT2 == 'Functional Scales/Global Health Status'
+GFR:
+  filter_identifier: GFR
+  filter_title: Glomerular Filtration Rate
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('GFRCV' , 'GFRLS' , 'GFRSI' )
+GGT:
+  filter_identifier: GGT
+  filter_title: Gamma Glutamyl Transferase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('GGTCV' , 'GGTLS' , 'GGTSI' )
+GLUC:
+  filter_identifier: GLUC
+  filter_title: Glucose
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('GLUCCV' , 'GLUCLS' , 'GLUCSI' )
+GLUCUR:
+  filter_identifier: GLUCUR
+  filter_title: Urine Glucose, Char
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('GLUCURCV' , 'GLUCURLS' , 'GLUCURSI' )
+HBVLCL:
+  filter_identifier: HBVLCL
+  filter_title: Hepatitis B Virus Viral Load, method PCR calculation
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('HBVLCLCV' , 'HBVLCLLS' , 'HBVLCLSI' )
+HCRIT:
+  filter_identifier: HCRIT
+  filter_title: Hematocrit
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('HCRITCV' , 'HCRITLS' , 'HCRITSI' )
+HDL:
+  filter_identifier: HDL
+  filter_title: HDL Cholesterol
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('HDLCV' , 'HDLLS' , 'HDLSI' )
+HGB:
+  filter_identifier: HGB
+  filter_title: Hemoglobin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('HGBCV' , 'HGBLS' , 'HGBSI' )
+HGHT:
+  filter_identifier: HGHT
+  filter_title: Height (cm)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'HGHT'
+HPT:
+  filter_identifier: HPT
+  filter_title: Haptoglobin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('HPTCV' , 'HPTLS' , 'HPTSI' )
+HR:
+  filter_identifier: HR
+  filter_title: Heart Rate (beats/min)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'HR'
+IBCU:
+  filter_identifier: IBCU
+  filter_title: Unsaturated Iron Binding Capacity
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('IBCUCV' , 'IBCULS' , 'IBCUSI' )
+IDIABP:
+  filter_identifier: IDIABP
+  filter_title: Sitting Diastolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'IDIABP'
+IPUL:
+  filter_identifier: IPUL
+  filter_title: Sitting Pulse Rate (beats/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'IPUL'
+IRESP:
+  filter_identifier: IRESP
+  filter_title: Sitting Respiratory Rate (breaths/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'IRESP'
+ISYSBP:
+  filter_identifier: ISYSBP
+  filter_title: Sitting Systolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'ISYSBP'
+IT:
+  filter_identifier: IT
+  filter_title: Intent-to-Treat Patients
+  filter_target: ADSL
+  filter_condition: ITTFL == 'Y'
+LDH:
+  filter_identifier: LDH
+  filter_title: Lactate Dehydrogenase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LDHCV' , 'LDHLS' , 'LDHSI' )
+LDL:
+  filter_identifier: LDL
+  filter_title: LDL Cholesterol
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LDLCV' , 'LDLLS' , 'LDLSI' )
+LIPASE:
+  filter_identifier: LIPASE
+  filter_title: Triacylglycerol Lipase
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LIPASECV' , 'LIPASELS' , 'LIPASESI' )
+LS:
+  filter_identifier: LS
+  filter_title: Safety Lab Standardisation Results
+  filter_target: ADLB
+  filter_condition: PARCAT2 == 'LS'
+LSTA:
+  filter_identifier: LSTA
+  filter_title: Last Disease Assessment by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'LSTA'
+LSTAC:
+  filter_identifier: LSTAC
+  filter_title: Last Disease Assessment Censored at First PD by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'LSTAC'
+LSTACF:
+  filter_identifier: LSTACF
+  filter_title: Last Disease Assessment Censored at First PD by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'LSTACF'
+LSTAF:
+  filter_identifier: LSTAF
+  filter_title: Last Disease Assessment by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'LSTAF'
+LYMPH:
+  filter_identifier: LYMPH
+  filter_title: Lymphocytes Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LYMPHCV' , 'LYMPHLS' , 'LYMPHSI' )
+LYMPHF:
+  filter_identifier: LYMPHF
+  filter_title: Lymphocytes, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LYMPHFCV' , 'LYMPHFLS' , 'LYMPHFSI' )
+LZPM:
+  filter_identifier: LZPM
+  filter_title: Lorazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('LZPMCV' , 'LZPMLS' , 'LZPMSI' )
+MABN:
+  filter_identifier: MABN
+  filter_title: Marked Abnormalities
+  filter_target: ADLB
+  filter_condition: ANRIND %in% c('LOW LOW', 'HIGH HIGH')
+MAGNES:
+  filter_identifier: MAGNES
+  filter_title: Magnesium
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MAGNESCV' , 'MAGNESLS' , 'MAGNESSI' )
+MALE:
+  filter_identifier: MALE
+  filter_title: Male Patients
+  filter_target: ADSL
+  filter_condition: SEX == 'M'
+MAXVAL:
+  filter_identifier: MAXVAL
+  filter_title: Maximum Post-baseline Value
+  filter_target: VISITS
+  filter_condition: AVISIT == 'POST-BASELINE MAXIMUM'
+MCH:
+  filter_identifier: MCH
+  filter_title: Ery. Mean Corpuscular Hemoglobin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MCHCV' , 'MCHLS' , 'MCHSI' )
+MCHC:
+  filter_identifier: MCHC
+  filter_title: Ery. Mean Corpuscular HGB, Concentration
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MCHCCV' , 'MCHCLS' , 'MCHCSI' )
+MCV:
+  filter_identifier: MCV
+  filter_title: Ery. Mean Corpuscular Volume
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MCVCV' , 'MCVLS' , 'MCVSI' )
+MDIS:
+  filter_identifier: MDIS
+  filter_title: Measurable Disease at Baseline by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'MDIS'
+MDISF:
+  filter_identifier: MDISF
+  filter_title: Measurable Disease at Baseline by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'MDISF'
+MHPREV:
+  filter_identifier: MHPREV
+  filter_title: Previous Medical History
+  filter_target: ADMH
+  filter_condition: ATIREL %in% c('PRIOR', 'PRIOR_CONCOMITANT')
+MIDZ:
+  filter_identifier: MIDZ
+  filter_title: Midazolam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MIDZCV' , 'MIDZLS' , 'MIDZSI' )
+MINVAL:
+  filter_identifier: MINVAL
+  filter_title: Minimum Post-baseline Value
+  filter_target: VISITS
+  filter_condition: AVISIT == 'POST-BASELINE MINIMUM'
+MONOS:
+  filter_identifier: MONOS
+  filter_title: Monocytes, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MONOSCV' , 'MONOSLS' , 'MONOSSI' )
+MONOSF:
+  filter_identifier: MONOSF
+  filter_title: Monocytes, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('MONOSFCV' , 'MONOSFLS' , 'MONOSFSI' )
+NCLDPX:
+  filter_identifier: NCLDPX
+  filter_title: Norchlordiazepoxide
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('NCLDPXCV' , 'NCLDPXLS' , 'NCLDPXSI' )
+NCOV:
+  filter_identifier: NCOV
+  filter_title: Excluding Confirmed/Suspected COVID-19 AEs
+  filter_target: ADAE
+  filter_condition: ACOVFL != 'Y'
+NCOVAS:
+  filter_identifier: NCOVAS
+  filter_title: AEs not Associated with COVID-19
+  filter_target: ADAE
+  filter_condition: ACOVASFL != 'Y'
+NDZPM:
+  filter_identifier: NDZPM
+  filter_title: Nordiazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('NDZPMCV' , 'NDZPMLS' , 'NDZPMSI' )
+NEUTR:
+  filter_identifier: NEUTR
+  filter_title: Neutrophils, Total, Abs
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('NEUTRCV' , 'NEUTRLS' , 'NEUTRSI' )
+NEUTRF:
+  filter_identifier: NEUTRF
+  filter_title: Neutrophils, Total, Pct
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('NEUTRFCV' , 'NEUTRFLS' , 'NEUTRFSI' )
+NFATAL:
+  filter_identifier: NFATAL
+  filter_title: Non-fatal Adverse Events
+  filter_target: ADAE
+  filter_condition: AESDTH == 'N'
+NREL:
+  filter_identifier: NREL
+  filter_title: Adverse Events not Related to Study Treatment
+  filter_target: ADAE
+  filter_condition: AREL == 'N'
+NSER:
+  filter_identifier: NSER
+  filter_title: Non-serious Adverse Events
+  filter_target: ADAE
+  filter_condition: AESER == 'N'
+ORIG:
+  filter_identifier: ORIG
+  filter_title: Original Items
+  filter_target: ADQS
+  filter_condition: PARCAT2 == 'DOriginal Items'
+OS:
+  filter_identifier: OS
+  filter_title: Overall Survival
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'OS'
+OVR:
+  filter_identifier: OVR
+  filter_title: Overall Response by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVR'
+OVRA:
+  filter_identifier: OVRA
+  filter_title: Overall Response by Adjudicator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRA'
+OVRF:
+  filter_identifier: OVRF
+  filter_title: Overall Response by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRF'
+OVRO:
+  filter_identifier: OVRO
+  filter_title: Overall Response by Oncologist
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRO'
+OVRO1:
+  filter_identifier: OVRO1
+  filter_title: Overall Response by Oncologist 1
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRO1'
+OVRO2:
+  filter_identifier: OVRO2
+  filter_title: Overall Response by Oncologist 2
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRO2'
+OVRR:
+  filter_identifier: OVRR
+  filter_title: Overall Response by Radiologist
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRR'
+OVRR1:
+  filter_identifier: OVRR1
+  filter_title: Overall Response by Radiologist 1
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRR1'
+OVRR2:
+  filter_identifier: OVRR2
+  filter_title: Overall Response by Radiologist 2
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'OVRR2'
+OXZPM:
+  filter_identifier: OXZPM
+  filter_title: Oxazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('OXZPMCV' , 'OXZPMLS' , 'OXZPMSI' )
+PAXIS:
+  filter_identifier: PAXIS
+  filter_title: Summary (Mean) P Axis (degree)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'PAXIS'
+PCLTN:
+  filter_identifier: PCLTN
+  filter_title: Procalcitonin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PCLTNCV' , 'PCLTNLS' , 'PCLTNSI' )
+PD:
+  filter_identifier: PD
+  filter_title: Disease Progression by Investigator
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'PD'
+PDDF:
+  filter_identifier: PDDF
+  filter_title: Disease Progression by IRF (derived)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'PDDF'
+PDF:
+  filter_identifier: PDF
+  filter_title: Disease Progression by IRF
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'PDF'
+PFS:
+  filter_identifier: PFS
+  filter_title: Earliest Contributing Event to Progression Free Survival by Investigator
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'PFS'
+PFSDF:
+  filter_identifier: PFSDF
+  filter_title: Earliest Contributing Event to Progression Free Survival by IRF (derived)
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'PFSDF'
+PFSF:
+  filter_identifier: PFSF
+  filter_title: Earliest Contributing Event to Progression Free Survival by IRF
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'PFSF'
+PHOSAT:
+  filter_identifier: PHOSAT
+  filter_title: Phosphorus
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PHOSATCV' , 'PHOSATLS' , 'PHOSATSI' )
+PLATE:
+  filter_identifier: PLATE
+  filter_title: Platelet
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PLATECV' , 'PLATELS' , 'PLATESI' )
+POTAS:
+  filter_identifier: POTAS
+  filter_title: Potassium
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('POTASCV' , 'POTASLS' , 'POTASSI' )
+PP:
+  filter_identifier: PP
+  filter_title: Per-Protocol Patients
+  filter_target: ADSL
+  filter_condition: PPROTFL == 'Y'
+PR:
+  filter_identifier: PR
+  filter_title: PR Duration (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'PR'
+PROTUR:
+  filter_identifier: PROTUR
+  filter_title: Urine Protein, Char
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PROTURCV' , 'PROTURLS' , 'PROTURSI' )
+PTINR:
+  filter_identifier: PTINR
+  filter_title: International Normalized Ratio
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PTINRCV' , 'PTINRLS' , 'PTINRSI' )
+PTT:
+  filter_identifier: PTT
+  filter_title: Activated Partial Thromboplastin Time
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('PTTCV' , 'PTTLS' , 'PTTSI' )
+PUL:
+  filter_identifier: PUL
+  filter_title: Pulse Rate (beats/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'PUL'
+PWAVE:
+  filter_identifier: PWAVE
+  filter_title: P Wave Assessment
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'PWAVE'
+QRS:
+  filter_identifier: QRS
+  filter_title: QRS Duration (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'QRS'
+QRSAXIS:
+  filter_identifier: QRSAXIS
+  filter_title: Summary (Mean) QRS Axis (degree)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'QRSAXIS'
+QS02801:
+  filter_identifier: QS02801
+  filter_title: 'EORTC QLQ-C30: Trouble doing strenuous activities'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02801'
+QS02802:
+  filter_identifier: QS02802
+  filter_title: 'EORTC QLQ-C30: Trouble taking a long walk'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02802'
+QS02803:
+  filter_identifier: QS02803
+  filter_title: 'EORTC QLQ-C30: Trouble taking a short walk'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02803'
+QS02804:
+  filter_identifier: QS02804
+  filter_title: 'EORTC QLQ-C30: Stay in bed or chair during the day'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02804'
+QS02805:
+  filter_identifier: QS02805
+  filter_title: 'EORTC QLQ-C30: Need help eating, dressing, washing'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02805'
+QS02806:
+  filter_identifier: QS02806
+  filter_title: 'EORTC QLQ-C30: Limited in work or daily activities'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02806'
+QS02807:
+  filter_identifier: QS02807
+  filter_title: 'EORTC QLQ-C30: Limited in hobbies or leisure activities'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02807'
+QS02808:
+  filter_identifier: QS02808
+  filter_title: 'EORTC QLQ-C30: Were you short of breath'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02808'
+QS02809:
+  filter_identifier: QS02809
+  filter_title: 'EORTC QLQ-C30: Have you had pain'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02809'
+QS02810:
+  filter_identifier: QS02810
+  filter_title: 'EORTC QLQ-C30: Did you need to rest'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02810'
+QS02811:
+  filter_identifier: QS02811
+  filter_title: 'EORTC QLQ-C30: Have you had trouble sleeping'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02811'
+QS02812:
+  filter_identifier: QS02812
+  filter_title: 'EORTC QLQ-C30: Have you felt weak'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02812'
+QS02813:
+  filter_identifier: QS02813
+  filter_title: 'EORTC QLQ-C30: Have you lacked appetite'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02813'
+QS02814:
+  filter_identifier: QS02814
+  filter_title: 'EORTC QLQ-C30: Have you felt nauseated'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02814'
+QS02815:
+  filter_identifier: QS02815
+  filter_title: 'EORTC QLQ-C30: Have you vomited'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02815'
+QS02816:
+  filter_identifier: QS02816
+  filter_title: 'EORTC QLQ-C30: Have you been constipated'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02816'
+QS02817:
+  filter_identifier: QS02817
+  filter_title: 'EORTC QLQ-C30: Have you had diarrhea'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02817'
+QS02818:
+  filter_identifier: QS02818
+  filter_title: 'EORTC QLQ-C30: Were you tired'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02818'
+QS02819:
+  filter_identifier: QS02819
+  filter_title: 'EORTC QLQ-C30: Pain interfere with daily activities'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02819'
+QS02820:
+  filter_identifier: QS02820
+  filter_title: 'EORTC QLQ-C30: Had difficulty concentrating'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02820'
+QS02821:
+  filter_identifier: QS02821
+  filter_title: 'EORTC QLQ-C30: Did you feel tense'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02821'
+QS02822:
+  filter_identifier: QS02822
+  filter_title: 'EORTC QLQ-C30: Did you worry'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02822'
+QS02823:
+  filter_identifier: QS02823
+  filter_title: 'EORTC QLQ-C30: Did you feel irritable'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02823'
+QS02824:
+  filter_identifier: QS02824
+  filter_title: 'EORTC QLQ-C30: Did you feel depressed'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02824'
+QS02825:
+  filter_identifier: QS02825
+  filter_title: 'EORTC QLQ-C30: Had difficulty remembering things'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02825'
+QS02826:
+  filter_identifier: QS02826
+  filter_title: 'EORTC QLQ-C30: Interfered with your family life'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02826'
+QS02827:
+  filter_identifier: QS02827
+  filter_title: 'EORTC QLQ-C30: Interfered with your social activities'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02827'
+QS02828:
+  filter_identifier: QS02828
+  filter_title: 'EORTC QLQ-C30: Caused you financial difficulties'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02828'
+QS02829:
+  filter_identifier: QS02829
+  filter_title: 'EORTC QLQ-C30: How would you rate your overall health'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02829'
+QS02830:
+  filter_identifier: QS02830
+  filter_title: 'EORTC QLQ-C30: Rate your overall quality of life'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS02830'
+QS028AP:
+  filter_identifier: QS028AP
+  filter_title: 'EORTC QLQ-C30: Appetite loss'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028AP'
+QS028CF:
+  filter_identifier: QS028CF
+  filter_title: 'EORTC QLQ-C30: Cognitive functioning'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028CF'
+QS028CO:
+  filter_identifier: QS028CO
+  filter_title: 'EORTC QLQ-C30: Constipation'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028CO'
+QS028DI:
+  filter_identifier: QS028DI
+  filter_title: 'EORTC QLQ-C30: Diarrhoea'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028DI'
+QS028DY:
+  filter_identifier: QS028DY
+  filter_title: 'EORTC QLQ-C30: Dyspnoea'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028DY'
+QS028EF:
+  filter_identifier: QS028EF
+  filter_title: 'EORTC QLQ-C30: Emotional functioning'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028EF'
+QS028FA:
+  filter_identifier: QS028FA
+  filter_title: 'EORTC QLQ-C30: Fatigue'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028FA'
+QS028FI:
+  filter_identifier: QS028FI
+  filter_title: 'EORTC QLQ-C30: Financial difficulties'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028FI'
+QS028NV:
+  filter_identifier: QS028NV
+  filter_title: 'EORTC QLQ-C30: Nausea and vomiting'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028NV'
+QS028PA:
+  filter_identifier: QS028PA
+  filter_title: 'EORTC QLQ-C30: Pain'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028PA'
+QS028PF2:
+  filter_identifier: QS028PF2
+  filter_title: 'EORTC QLQ-C30: Physical functioning (revised)'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028PF2'
+QS028QL2:
+  filter_identifier: QS028QL2
+  filter_title: 'EORTC QLQ-C30: Global health status/QoL (revised)'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028QL2'
+QS028RF2:
+  filter_identifier: QS028RF2
+  filter_title: 'EORTC QLQ-C30: Role functioning (revised)'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028RF2'
+QS028SF:
+  filter_identifier: QS028SF
+  filter_title: 'EORTC QLQ-C30: Social functioning'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028SF'
+QS028SL:
+  filter_identifier: QS028SL
+  filter_title: 'EORTC QLQ-C30: Insomnia'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QS028SL'
+QSALL:
+  filter_identifier: QSALL
+  filter_title: 'EORTC QLQ-C30: Reason not done'
+  filter_target: ADQS
+  filter_condition: PARAMCD == 'QSALL'
+QT:
+  filter_identifier: QT
+  filter_title: QT Duration (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'QT'
+QTCB:
+  filter_identifier: QTCB
+  filter_title: QTcB - Bazett’s Correction Formula (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'QTCB'
+QTCF:
+  filter_identifier: QTCF
+  filter_title: QTcF - Fridericia’s Correction Formula (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'QTCF'
+RBC:
+  filter_identifier: RBC
+  filter_title: Erythrocytes
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('RBCCV' , 'RBCLS' , 'RBCSI' )
+REL:
+  filter_identifier: REL
+  filter_title: Adverse Events Related to Study Treatment
+  filter_target: ADAE
+  filter_condition: AREL == 'Y'
+RESP:
+  filter_identifier: RESP
+  filter_title: Respiratory Rate (breaths/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'RESP'
+RR:
+  filter_identifier: RR
+  filter_title: RR Duration (msec)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'RR'
+RSD:
+  filter_identifier: RSD
+  filter_title: Duration of Response by Investigator (confirmation for response not
+    required)
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'RSD'
+RSDDF:
+  filter_identifier: RSDDF
+  filter_title: Duration of Response by IRF (derived, confirmation for response not
+    required)
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'RSDDF'
+RSDF:
+  filter_identifier: RSDF
+  filter_title: Duration of Response by IRF (confirmation for response not required)
+  filter_target: ADTTE
+  filter_condition: PARAMCD == 'RSDF'
+RSP:
+  filter_identifier: RSP
+  filter_title: Response by Investigator (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'RSP'
+RSPDF:
+  filter_identifier: RSPDF
+  filter_title: Response by IRF (derived, confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'RSPDF'
+RSPF:
+  filter_identifier: RSPF
+  filter_title: Response by IRF (confirmation not required)
+  filter_target: ADRS
+  filter_condition: PARAMCD == 'RSPF'
+SDIABP:
+  filter_identifier: SDIABP
+  filter_title: Supine Diastolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'SDIABP'
+SDSC:
+  filter_identifier: SDSC
+  filter_title: AEs Leading to Study Discontinuation
+  filter_target: ADAE
+  filter_condition: ASTDISFL == 'Y'
+SE:
+  filter_identifier: SE
+  filter_title: Safety-Evaluable Patients
+  filter_target: ADSL
+  filter_condition: SAFFL == 'Y'
+SER:
+  filter_identifier: SER
+  filter_title: Serious Adverse Events
+  filter_target: ADAE
+  filter_condition: AESER == 'Y'
+SI:
+  filter_identifier: SI
+  filter_title: SI Results
+  filter_target: ADLB
+  filter_condition: PARCAT2 == 'SI'
+SODIUM:
+  filter_identifier: SODIUM
+  filter_title: Sodium
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('SODIUMCV' , 'SODIUMLS' , 'SODIUMSI' )
+SPUL:
+  filter_identifier: SPUL
+  filter_title: Supine Pulse Rate (beats/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'SPUL'
+SRESP:
+  filter_identifier: SRESP
+  filter_title: Supine Respiratory Rate (breaths/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'SRESP'
+SSYSBP:
+  filter_identifier: SSYSBP
+  filter_title: Supine Systolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'SSYSBP'
+SYMPSC:
+  filter_identifier: SYMPSC
+  filter_title: Symptom Scales
+  filter_target: ADQS
+  filter_condition: PARCAT2 == 'Symptom Scales'
+SYSBP:
+  filter_identifier: SYSBP
+  filter_title: Systolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'SYSBP'
+T3:
+  filter_identifier: T3
+  filter_title: Triiodothyronine, Total
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('T3CV' , 'T3LS' , 'T3SI' )
+T4:
+  filter_identifier: T4
+  filter_title: Thyroxine, Total
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('T4CV' , 'T4LS' , 'T4SI' )
+T4FREE:
+  filter_identifier: T4FREE
+  filter_title: Thyroxine, Free
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('T4FREECV' , 'T4FREELS' , 'T4FREESI' )
+TAXIS:
+  filter_identifier: TAXIS
+  filter_title: Summary (Mean) T Wave Axis (degree)
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'TAXIS'
+TBILI:
+  filter_identifier: TBILI
+  filter_title: Bilirubin
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TBILICV' , 'TBILILS' , 'TBILISI' )
+TDIABP:
+  filter_identifier: TDIABP
+  filter_title: Standing Diastolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'TDIABP'
+TEMP:
+  filter_identifier: TEMP
+  filter_title: Temperature (C)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'TEMP'
+TMZPM:
+  filter_identifier: TMZPM
+  filter_title: Temazepam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TMZPMCV' , 'TMZPMLS' , 'TMZPMSI' )
+TPROT:
+  filter_identifier: TPROT
+  filter_title: Protein, Total
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TPROTCV' , 'TPROTLS' , 'TPROTSI' )
+TPUL:
+  filter_identifier: TPUL
+  filter_title: Standing Pulse Rate (beats/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'TPUL'
+TRESP:
+  filter_identifier: TRESP
+  filter_title: Standing Respiratory Rate (breaths/min)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'TRESP'
+TRIG:
+  filter_identifier: TRIG
+  filter_title: Triglycerides
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TRIGCV' , 'TRIGLS' , 'TRIGSI' )
+TRIGF:
+  filter_identifier: TRIGF
+  filter_title: Triglycerides, Fasting
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TRIGFCV' , 'TRIGFLS' , 'TRIGFSI' )
+TRZ:
+  filter_identifier: TRZ
+  filter_title: Triazolam
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TRZCV' , 'TRZLS' , 'TRZSI' )
+TSH:
+  filter_identifier: TSH
+  filter_title: Thyroid-Stimulating Hormone
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('TSHCV' , 'TSHLS' , 'TSHSI' )
+TSYSBP:
+  filter_identifier: TSYSBP
+  filter_title: Standing Systolic Blood Pressure (mmHg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'TSYSBP'
+TWAVE:
+  filter_identifier: TWAVE
+  filter_title: T Wave Assessment
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'TWAVE'
+UCULTC:
+  filter_identifier: UCULTC
+  filter_title: Urine Culture, Char
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('UCULTCCV' , 'UCULTCLS' , 'UCULTCSI' )
+URACID:
+  filter_identifier: URACID
+  filter_title: Uric Acid
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('URACIDCV' , 'URACIDLS' , 'URACIDSI' )
+USG:
+  filter_identifier: USG
+  filter_title: Urine Specific Gravity
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('USGCV' , 'USGLS' , 'USGSI' )
+UWAVE:
+  filter_identifier: UWAVE
+  filter_title: U Wave Assessment
+  filter_target: ADEG
+  filter_condition: PARAMCD == 'UWAVE'
+WBC:
+  filter_identifier: WBC
+  filter_title: Total Leukocyte Count
+  filter_target: ADLB
+  filter_condition: PARAMCD %in% c('WBCCV' , 'WBCLS' , 'WBCSI' )
+WD:
+  filter_identifier: WD
+  filter_title: Adverse Events Leadings to Withdrawal
+  filter_target: ADAE
+  filter_condition: AEACN == 'DRUG WITHDRAWN'
+WGHT:
+  filter_identifier: WGHT
+  filter_title: Weight (kg)
+  filter_target: ADVS
+  filter_condition: PARAMCD == 'WGHT'

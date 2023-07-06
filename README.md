@@ -10,7 +10,7 @@ if (!requireNamespace("remotes")) {
   install.packages("remotes")
 }
 remotes::install_github(
-  repo = "pharmaverse/filters",
+  repo = "openpharma/filters",
   upgrade = "never"
 )
 ```

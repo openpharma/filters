@@ -18,15 +18,19 @@
 load_filters <- function(yaml_file, overwrite = FALSE) {
   stopifnot(tolower(tools::file_ext(yaml_file)) %in% c("yml", "yaml"))
   filter_spec <- yaml::read_yaml(yaml_file)
+  filter_spec <- lapply(names(filter_spec),
+                        function(x){
+                          filter_spec[[x]]$id = x
+                          return(filter_spec[[x]])})
   Map(function(filter, spec) {
     add_filter(
-      id = filter,
-      title = spec$title,
-      target = spec$target,
-      condition = spec$condition,
-      character_only = TRUE,
-      overwrite = overwrite
-    )
+        id = filter,
+        title = spec$title,
+        target = spec$target,
+        condition = spec$condition,
+        character_only = TRUE,
+        overwrite = overwrite
+      )
   }, names(filter_spec), filter_spec)
   invisible(TRUE)
 }

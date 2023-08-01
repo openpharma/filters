@@ -173,7 +173,7 @@ apply_filter <- function(data, ...) {
 #' @rdname apply_filter
 #' @export
 apply_filter.default <- function(data, ...) {
-  stop("No `apply_filter()` method defined for class ", class(data)[1L], ".")
+  stop("No `apply_filter()` method defined for class `", class(data)[1L], "`.")
 }
 
 #' @rdname apply_filter

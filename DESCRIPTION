@@ -9,7 +9,6 @@ Description: Enables filtering datasets by a priori specified identifiers
     which correspond to saved filter expressions.
 Imports: yaml
 Suggests: 
-    ldply,
     dplyr,
     magrittr,
     random.cdisc.data,

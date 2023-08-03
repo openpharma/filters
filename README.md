@@ -21,6 +21,8 @@ remotes::install_github(
 library(filters)
 library(magrittr)
 library(random.cdisc.data)
+library(rtables)
+library(tern)
 set.seed(1)
 adsl <- radsl()
 adae <- radae(adsl)
@@ -214,12 +216,47 @@ t_ae <- function(datasets) {
     suffixes = c("", "_ADAE")
   )
   
-  tern::t_events_per_term_id(
-    terms = anl[, c("AEBODSYS", "AEDECOD")],
-    id = anl$USUBJID,
-    col_by = anl$ACTARM,
-    col_N = table(datasets$adsl$ACTARM)
+  split_fun <- drop_split_levels
+
+  lyt <- basic_table(show_colcounts = TRUE) %>%
+  split_cols_by(var = "ARM") %>%
+  add_overall_col(label = "All Patients") %>%
+  analyze_num_patients(
+    vars = "USUBJID",
+    .stats = c("unique", "nonunique"),
+    .labels = c(
+      unique = "Total number of patients with at least one adverse event",
+      nonunique = "Overall total number of events"
+    )
+  ) %>%
+  split_rows_by(
+    "AEBODSYS",
+    child_labels = "visible",
+    nested = FALSE,
+    split_fun = split_fun,
+    label_pos = "topleft",
+    split_label = obj_label(adae$AEBODSYS)
+  ) %>%
+  summarize_num_patients(
+    var = "USUBJID",
+    .stats = c("unique", "nonunique"),
+    .labels = c(
+      unique = "Total number of patients with at least one adverse event",
+      nonunique = "Total number of events"
+    )
+  ) %>%
+  count_occurrences(
+    vars = "AEDECOD",
+    .indent_mods = -1L
+  ) %>%
+  append_varlabels(adae, "AEDECOD", indent = 1L)
+
+  result <- build_table(
+    lyt,
+    df = datasets$adae,
+    alt_counts_df = datasets$adsl
   )
+  return(result)
 }
 ```
 
@@ -236,50 +273,42 @@ vads %>% apply_filter("SE") %>% t_ae()
     400/400 records matched the filter condition `SAFFL == 'Y'`.
 
 ``` 
-                                                            A: Drug X             B: Placebo          C: Combination
-                                                             (N=133)               (N=141)               (N=126)    
---------------------------------------------------------------------------------------------------------------------
-- Any event -
-  Total number of patients with at least one event         121 (90.98%)          128 (90.78%)          120 (95.24%) 
-  Total number of events                                       601                   721                   645      
-
-cl A.1
-  Total number of patients with at least one event         73 (54.89%)           85 (60.28%)           69 (54.76%)  
-  Total number of events                                       110                   144                   123      
-  dcd A.1.1.1.1                                            45 (33.83%)           55 (39.01%)            47 (37.3%)  
-  dcd A.1.1.1.2                                            41 (30.83%)           51 (36.17%)           45 (35.71%)  
-
-cl B.1
-  Total number of patients with at least one event         47 (35.34%)            43 (30.5%)            47 (37.3%)  
-  Total number of events                                        65                    56                    62      
-  dcd B.1.1.1.1                                            47 (35.34%)            43 (30.5%)            47 (37.3%)  
-
-cl B.2
-  Total number of patients with at least one event         65 (48.87%)           82 (58.16%)           82 (65.08%)  
-  Total number of events                                       107                   133                   140      
-  dcd B.2.1.2.1                                            46 (34.59%)           48 (34.04%)            47 (37.3%)  
-  dcd B.2.2.3.1                                            37 (27.82%)           56 (39.72%)            48 (38.1%)  
-
-cl C.1
-  Total number of patients with at least one event         40 (30.08%)           45 (31.91%)           55 (43.65%)  
-  Total number of events                                        53                    58                    73      
-  dcd C.1.1.1.3                                            40 (30.08%)           45 (31.91%)           55 (43.65%)  
-
-cl C.2
-  Total number of patients with at least one event         47 (35.34%)           60 (42.55%)           60 (47.62%)  
-  Total number of events                                        62                    87                    75      
-  dcd C.2.1.2.1                                            47 (35.34%)           60 (42.55%)           60 (47.62%)  
-
-cl D.1
-  Total number of patients with at least one event         75 (56.39%)           88 (62.41%)           73 (57.94%)  
-  Total number of events                                       124                   163                   122      
-  dcd D.1.1.1.1                                            53 (39.85%)           62 (43.97%)            47 (37.3%)  
-  dcd D.1.1.4.2                                            40 (30.08%)           58 (41.13%)           43 (34.13%)  
-
-cl D.2
-  Total number of patients with at least one event         57 (42.86%)           59 (41.84%)           40 (31.75%)  
-  Total number of events                                        80                    80                    50      
-  dcd D.2.1.5.3                                            57 (42.86%)           59 (41.84%)           40 (31.75%)  
+Body System or Organ Class                                    A: Drug X    B: Placebo    C: Combination   All Patients
+  Dictionary-Derived Term                                      (N=133)       (N=141)        (N=126)         (N=400)   
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Total number of patients with at least one adverse event     111 (83.5%)   132 (93.6%)    119 (94.4%)     362 (90.5%) 
+Overall total number of events                                   636           755            655             2046    
+cl A.1                                                                                                                
+  Total number of patients with at least one adverse event   63 (47.4%)    79 (56.0%)      71 (56.3%)     213 (53.2%) 
+  Total number of events                                         123           144            133             400     
+  dcd A.1.1.1.1                                              47 (35.3%)    63 (44.7%)      50 (39.7%)     160 (40.0%) 
+  dcd A.1.1.1.2                                              42 (31.6%)    47 (33.3%)      44 (34.9%)     133 (33.2%) 
+cl B.1                                                                                                                
+  Total number of patients with at least one adverse event   47 (35.3%)    49 (34.8%)      59 (46.8%)     155 (38.8%) 
+  Total number of events                                         73            63              75             211     
+  dcd B.1.1.1.1                                              47 (35.3%)    49 (34.8%)      59 (46.8%)     155 (38.8%) 
+cl B.2                                                                                                                
+  Total number of patients with at least one adverse event   73 (54.9%)    88 (62.4%)      73 (57.9%)     234 (58.5%) 
+  Total number of events                                         132           156            137             425     
+  dcd B.2.1.2.1                                              44 (33.1%)    56 (39.7%)      50 (39.7%)     150 (37.5%) 
+  dcd B.2.2.3.1                                              48 (36.1%)    59 (41.8%)      44 (34.9%)     151 (37.8%) 
+cl C.1                                                                                                                
+  Total number of patients with at least one adverse event   50 (37.6%)    53 (37.6%)      42 (33.3%)     145 (36.2%) 
+  Total number of events                                         62            75              62             199     
+  dcd C.1.1.1.3                                              50 (37.6%)    53 (37.6%)      42 (33.3%)     145 (36.2%) 
+cl C.2                                                                                                                
+  Total number of patients with at least one adverse event   50 (37.6%)    65 (46.1%)      50 (39.7%)     165 (41.2%) 
+  Total number of events                                         67            87              63             217     
+  dcd C.2.1.2.1                                              50 (37.6%)    65 (46.1%)      50 (39.7%)     165 (41.2%) 
+cl D.1                                                                                                                
+  Total number of patients with at least one adverse event   74 (55.6%)    95 (67.4%)      72 (57.1%)     241 (60.2%) 
+  Total number of events                                         120           158            112             390     
+  dcd D.1.1.1.1                                              37 (27.8%)    59 (41.8%)      35 (27.8%)     131 (32.8%) 
+  dcd D.1.1.4.2                                              54 (40.6%)    63 (44.7%)      48 (38.1%)     165 (41.2%) 
+cl D.2                                                                                                                
+  Total number of patients with at least one adverse event   43 (32.3%)    54 (38.3%)      56 (44.4%)     153 (38.2%) 
+  Total number of events                                         59            72              73             204     
+  dcd D.2.1.5.3                                              43 (32.3%)    54 (38.3%)      56 (44.4%)     153 (38.2%) 
 ```
 
 ``` r
@@ -294,59 +323,29 @@ vads %>% apply_filter("SER_SE") %>% t_ae()
     581/1967 records matched the filter condition `AESER == 'Y'`.
 
 ``` 
-                                                            A: Drug X             B: Placebo          C: Combination
-                                                             (N=133)               (N=141)               (N=126)    
---------------------------------------------------------------------------------------------------------------------
-- Any event -
-  Total number of patients with at least one event         88 (66.17%)           100 (70.92%)          93 (73.81%)  
-  Total number of events                                       165                   228                   188      
-
-cl A.1
-  Total number of patients with at least one event         41 (30.83%)           51 (36.17%)           45 (35.71%)  
-  Total number of events                                        52                    68                    62      
-  dcd A.1.1.1.2                                            41 (30.83%)           51 (36.17%)           45 (35.71%)  
-
-cl B.2
-  Total number of patients with at least one event         37 (27.82%)           56 (39.72%)            48 (38.1%)  
-  Total number of events                                        47                    73                    63      
-  dcd B.2.2.3.1                                            37 (27.82%)           56 (39.72%)            48 (38.1%)  
-
-cl D.1
-  Total number of patients with at least one event         53 (39.85%)           62 (43.97%)            47 (37.3%)  
-  Total number of events                                        66                    87                    63      
-  dcd D.1.1.1.1                                            53 (39.85%)           62 (43.97%)            47 (37.3%)  
+Body System or Organ Class                                   A: Drug X    B: Placebo    C: Combination   All Patients
+  Dictionary-Derived Term                                     (N=133)       (N=141)        (N=126)         (N=400)   
+—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Total number of patients with at least one adverse event     93 (69.9%)   110 (78.0%)     98 (77.8%)     301 (75.2%) 
+Overall total number of events                                  248           280            246             774     
+cl A.1                                                                                                               
+  Total number of patients with at least one adverse event   42 (31.6%)   47 (33.3%)      44 (34.9%)     133 (33.2%) 
+  Total number of events                                         54           63              58             175     
+  dcd A.1.1.1.2                                              42 (31.6%)   47 (33.3%)      44 (34.9%)     133 (33.2%) 
+cl B.1                                                                                                               
+  Total number of patients with at least one adverse event   47 (35.3%)   49 (34.8%)      59 (46.8%)     155 (38.8%) 
+  Total number of events                                         73           63              75             211     
+  dcd B.1.1.1.1                                              47 (35.3%)   49 (34.8%)      59 (46.8%)     155 (38.8%) 
+cl B.2                                                                                                               
+  Total number of patients with at least one adverse event   48 (36.1%)   59 (41.8%)      44 (34.9%)     151 (37.8%) 
+  Total number of events                                         74           78              65             217     
+  dcd B.2.2.3.1                                              48 (36.1%)   59 (41.8%)      44 (34.9%)     151 (37.8%) 
+cl D.1                                                                                                               
+  Total number of patients with at least one adverse event   37 (27.8%)   59 (41.8%)      35 (27.8%)     131 (32.8%) 
+  Total number of events                                         47           76              48             171     
+  dcd D.1.1.1.1                                              37 (27.8%)   59 (41.8%)      35 (27.8%)     131 (32.8%) 
 ```
 
-``` r
-vads %>% apply_filter("CTC34_REL_SE") %>% t_ae()
-```
-
-    Filter 'SE' matched target ADSL.
-
-    400/400 records matched the filter condition `SAFFL == 'Y'`.
-
-    Filters 'CTC34', 'REL' matched target ADAE.
-
-    367/1967 records matched the filter condition `AETOXGR %in% c('4', '5') & AREL == 'Y'`.
-
-``` 
-                                                            A: Drug X             B: Placebo          C: Combination
-                                                             (N=133)               (N=141)               (N=126)    
---------------------------------------------------------------------------------------------------------------------
-- Any event -
-  Total number of patients with at least one event         72 (54.14%)           70 (49.65%)            79 (62.7%)  
-  Total number of events                                       118                   114                   135      
-
-cl B.1
-  Total number of patients with at least one event         47 (35.34%)            43 (30.5%)            47 (37.3%)  
-  Total number of events                                        65                    56                    62      
-  dcd B.1.1.1.1                                            47 (35.34%)            43 (30.5%)            47 (37.3%)  
-
-cl C.1
-  Total number of patients with at least one event         40 (30.08%)           45 (31.91%)           55 (43.65%)  
-  Total number of events                                        53                    58                    73      
-  dcd C.1.1.1.3                                            40 (30.08%)           45 (31.91%)           55 (43.65%)  
-```
 
 ## (Current) Limitations
 

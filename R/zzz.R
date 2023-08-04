@@ -2,7 +2,6 @@
 
 local({
   file_path <- system.file("filters.yaml", package = "filters")
-  # load_filters(file_path)
   filter_definitions <- plyr::ldply(yaml::read_yaml(file_path), data.frame, stringsAsFactors = FALSE)
   filter_definitions$id <- filter_definitions$.id
   filter_definitions$.id <- NULL

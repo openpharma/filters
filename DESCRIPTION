@@ -5,17 +5,21 @@ Version: 0.3.0
 Author: Thomas Neitman [aut, cre],
   Joe Zhu [ctb]
 Maintainer: Joe Zhu <joe.zhu@roche.com>
-Description: Enables filtering datasets by a priori specified identifiers
+Description: Enables filtering datasets by a prior specified identifiers
     which correspond to saved filter expressions.
-Imports: yaml
-Suggests: 
-    ldply,
-    dplyr,
+Imports: 
+    plyr,
     magrittr,
+    yaml
+Suggests:
+    dplyr,
     random.cdisc.data,
     testthat
 License: file LICENSE
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
+Remotes:
+    insightsengineering/random.cdisc.data@*release

@@ -55,9 +55,16 @@ add_filter <- function(id,
                        character_only = FALSE,
                        overwrite = FALSE) {
   assert_valid_id(id)
-  assert_character_scalar(title)
-  assert_character_vector(target)
-  assert_logical_scalar(character_only)
+  tryCatch(
+    {
+      assert_character_scalar(title)
+      assert_character_vector(target)
+      assert_logical_scalar(character_only)
+    },
+    error = function(e) {
+      stop("Failed at filter ", squote(id), "\n", print(e))
+    }
+  )
   assert_logical_scalar(overwrite)
   if (!overwrite) assert_filter_exists(id)
 
@@ -173,7 +180,7 @@ apply_filter <- function(data, ...) {
 #' @rdname apply_filter
 #' @export
 apply_filter.default <- function(data, ...) {
-  stop("No `apply_filter()` method defined for class ", class(data)[1L], ".")
+  stop("No `apply_filter()` method defined for class `", class(data)[1L], "`.")
 }
 
 #' @rdname apply_filter
@@ -253,13 +260,13 @@ apply_filter.list <- function(data, id, verbose = TRUE, ...) {
   }, data, dataset_names)
 
   if ("ADSL" %in% datasets_to_filter) {
-    remove_subjects_which_are_not_in_adsl(filtered_datasets)
+    remove_subjects_not_in_adsl(filtered_datasets)
   } else {
     filtered_datasets
   }
 }
 
-remove_subjects_which_are_not_in_adsl <- function(filtered_datasets) {
+remove_subjects_not_in_adsl <- function(filtered_datasets) {
   is_adsl <- toupper(names(filtered_datasets)) == "ADSL"
   non_adsl_datasets <- names(filtered_datasets)[!is_adsl]
   for (ds in non_adsl_datasets) {

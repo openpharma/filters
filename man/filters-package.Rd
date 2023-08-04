@@ -6,5 +6,5 @@
 \alias{filters-package}
 \title{filters Package}
 \description{
-Enables filtering datasets by a priori specified identifiers which correspond to saved filter expressions.
+Enables filtering datasets by a prior specified identifiers which correspond to saved filter expressions.
 }

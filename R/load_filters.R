@@ -20,13 +20,13 @@ load_filters <- function(yaml_file, overwrite = FALSE) {
   filter_spec <- yaml::read_yaml(yaml_file)
   Map(function(filter, spec) {
     add_filter(
-        id = filter,
-        title = spec$title,
-        target = spec$target,
-        condition = spec$condition,
-        character_only = TRUE,
-        overwrite = overwrite
-      )
+      id = filter,
+      title = spec$title,
+      target = spec$target,
+      condition = spec$condition,
+      character_only = TRUE,
+      overwrite = overwrite
+    )
   }, names(filter_spec), filter_spec)
   invisible(TRUE)
 }

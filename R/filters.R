@@ -55,10 +55,11 @@ add_filter <- function(id,
                        character_only = FALSE,
                        overwrite = FALSE) {
   assert_valid_id(id)
-  tryCatch({
-    assert_character_scalar(title)
-    assert_character_vector(target)
-    assert_logical_scalar(character_only)
+  tryCatch(
+    {
+      assert_character_scalar(title)
+      assert_character_vector(target)
+      assert_logical_scalar(character_only)
     },
     error = function(e) {
       stop("Failed at filter ", squote(id), "\n", print(e))

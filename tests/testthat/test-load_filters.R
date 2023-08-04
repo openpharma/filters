@@ -1,6 +1,6 @@
 context("test-load_filters")
 
-filters_file <- system.file("filters.yaml", package = "filters")
+filters_file <- system.file("filters_eg.yaml", package = "filters")
 
 test_that("`load_filters` errors when input is not a yaml file", {
   expect_error(load_filters("not_a_yaml_file.txt"))

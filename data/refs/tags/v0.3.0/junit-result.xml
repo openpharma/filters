@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test-assert" timestamp="2023-08-04T23:54:46Z" hostname="28f273e645ff" tests="24" skipped="0" failures="0" errors="0" time="0.2">
+    <testcase time="0.011" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.022" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.0179999999999999" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.013" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.00600000000000001" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.00600000000000001" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.00700000000000001" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.00600000000000001" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.01" classname="test_assert" name="_assert_character_scalar_works"/>
+    <testcase time="0.04" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.001" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.00600000000000001" classname="test_assert" name="_assert_logical_scalar_works"/>
+    <testcase time="0.004" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.001" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.001" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.00499999999999989" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.00800000000000001" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_character_vector_works"/>
+    <testcase time="0.005" classname="test_assert" name="_assert_character_vector_works"/>
+  </testsuite>
+  <testsuite name="test-filters" timestamp="2023-08-04T23:54:46Z" hostname="28f273e645ff" tests="46" skipped="0" failures="0" errors="0" time="0.634">
+    <testcase time="0.25" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.01" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.0290000000000001" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.0169999999999999" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.014" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.016" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.012" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.00900000000000012" classname="test_filters" name="Filtering_works_as_expected"/>
+    <testcase time="0.0209999999999999" classname="test_filters" name="Using_filters_with_multiple_targets_affects_all_listed_datasets"/>
+    <testcase time="0.012" classname="test_filters" name="Using_filters_with_multiple_targets_affects_all_listed_datasets"/>
+    <testcase time="0.026" classname="test_filters" name="Using_filters_with_multiple_targets_affects_all_listed_datasets"/>
+    <testcase time="0.0109999999999999" classname="test_filters" name="Filtering_preserves_column_labels"/>
+    <testcase time="0.0330000000000001" classname="test_filters" name="Filtering_preserves_column_labels"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00600000000000001" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00600000000000001" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.002" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00900000000000012" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00099999999999989" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00100000000000011" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00099999999999989" classname="test_filters" name="Filter_IDs_are_attached_as_an_attribute"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Adding_new_filters_works"/>
+    <testcase time="0.00099999999999989" classname="test_filters" name="Adding_new_filters_works"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Adding_new_filters_with_multiple_targets_works"/>
+    <testcase time="0.0109999999999999" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Invalid_filter_IDs_throw_an_error"/>
+    <testcase time="0.00800000000000001" classname="test_filters" name="Overwriting_existing_filters_fails_when_overwrite_FALSE_"/>
+    <testcase time="0.00599999999999978" classname="test_filters" name="Overwriting_existing_filters_fails_when_overwrite_FALSE_"/>
+    <testcase time="0.004" classname="test_filters" name="Overwriting_existing_filters_suceeds_when_overwrite_TRUE_"/>
+    <testcase time="0.00100000000000011" classname="test_filters" name="Overwriting_existing_filters_suceeds_when_overwrite_TRUE_"/>
+    <testcase time="0.00800000000000001" classname="test_filters" name="_get_filter_errors_when_ID_does_not_exist"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="_get_filter_errors_when_ID_does_not_exist"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="_get_filter_errors_when_ID_does_not_exist"/>
+    <testcase time="0.0109999999999999" classname="test_filters" name="Filters_can_only_be_applied_to_data_frames_and_lists"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Filters_can_only_be_applied_to_data_frames_and_lists"/>
+    <testcase time="0.00499999999999989" classname="test_filters" name="Filters_can_only_be_applied_to_data_frames_and_lists"/>
+    <testcase time="0.00500000000000012" classname="test_filters" name="Filters_can_only_be_applied_to_data_frames_and_lists"/>
+    <testcase time="0.00800000000000001" classname="test_filters" name="Only_named_lists_can_be_filtered"/>
+    <testcase time="0.00800000000000001" classname="test_filters" name="A_missing_target_datasets_causes_an_error"/>
+    <testcase time="0.00600000000000001" classname="test_filters" name="A_missing_target_datasets_causes_an_error"/>
+    <testcase time="0.00600000000000001" classname="test_filters" name="All_filters_are_properly_listed"/>
+  </testsuite>
+  <testsuite name="test-load_filters" timestamp="2023-08-04T23:54:47Z" hostname="28f273e645ff" tests="8" skipped="0" failures="0" errors="0" time="0.061">
+    <testcase time="0.022" classname="test_load_filters" name="_load_filters_errors_when_input_is_not_a_yaml_file"/>
+    <testcase time="0.00800000000000001" classname="test_load_filters" name="_load_filters_errors_when_input_is_not_a_yaml_file"/>
+    <testcase time="0.00499999999999989" classname="test_load_filters" name="_load_filters_errors_when_input_is_not_a_yaml_file"/>
+    <testcase time="0.00500000000000012" classname="test_load_filters" name="_load_filters_errors_when_input_is_not_a_yaml_file"/>
+    <testcase time="0.00499999999999989" classname="test_load_filters" name="_load_filters_adds_non_existing_filters"/>
+    <testcase time="0.00099999999999989" classname="test_load_filters" name="_load_filters_adds_non_existing_filters"/>
+    <testcase time="0.01" classname="test_load_filters" name="_load_filters_does_not_overwrite_existing_filters_by_default"/>
+    <testcase time="0.00500000000000012" classname="test_load_filters" name="_load_filters_overwrites_existing_filters_when_overwrite_TRUE_"/>
+  </testsuite>
+  <testsuite name="test-utils" timestamp="2023-08-04T23:54:47Z" hostname="28f273e645ff" tests="3" skipped="0" failures="0" errors="0" time="0.064">
+    <testcase time="0.0169999999999999" classname="test_utils" name="_semi_join_keeps_only_records_in_x_that_have_matching_records_in_y_"/>
+    <testcase time="0.03" classname="test_utils" name="_semi_join_keeps_only_records_in_x_that_have_matching_records_in_y_"/>
+    <testcase time="0.0170000000000001" classname="test_utils" name="_semi_join_preserves_column_labels"/>
+  </testsuite>
+</testsuites>

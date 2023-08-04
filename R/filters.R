@@ -260,13 +260,13 @@ apply_filter.list <- function(data, id, verbose = TRUE, ...) {
   }, data, dataset_names)
 
   if ("ADSL" %in% datasets_to_filter) {
-    remove_subjects_which_are_not_in_adsl(filtered_datasets)
+    remove_subjects_not_in_adsl(filtered_datasets)
   } else {
     filtered_datasets
   }
 }
 
-remove_subjects_which_are_not_in_adsl <- function(filtered_datasets) {
+remove_subjects_not_in_adsl <- function(filtered_datasets) {
   is_adsl <- toupper(names(filtered_datasets)) == "ADSL"
   non_adsl_datasets <- names(filtered_datasets)[!is_adsl]
   for (ds in non_adsl_datasets) {

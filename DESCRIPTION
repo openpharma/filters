@@ -5,7 +5,7 @@ Version: 0.3.0
 Author: Thomas Neitman [aut, cre],
   Joe Zhu [ctb]
 Maintainer: Joe Zhu <joe.zhu@roche.com>
-Description: Enables filtering datasets by a priori specified identifiers
+Description: Enables filtering datasets by a prior specified identifiers
     which correspond to saved filter expressions.
 Imports: 
     plyr,

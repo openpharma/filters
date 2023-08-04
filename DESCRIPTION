@@ -7,11 +7,12 @@ Author: Thomas Neitman [aut, cre],
 Maintainer: Joe Zhu <joe.zhu@roche.com>
 Description: Enables filtering datasets by a priori specified identifiers
     which correspond to saved filter expressions.
-Imports: yaml
-Suggests:
+Imports: 
     plyr,
-    dplyr,
     magrittr,
+    yaml
+Suggests:
+    dplyr,
     random.cdisc.data,
     testthat
 License: file LICENSE
